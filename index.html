@@ -3,63 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Albi</title>
+  <title>JPPX</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background: black;
-      color: white;
-    }
-
-    .finisher-header {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 2;
-    }
-
-    .title {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      color: #87fef6;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #ccc;
-    }
-
-    .contact-btn {
-      background-color: #2f1cff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: #1b0ecf;
-    }
-  </style>
 </head>
 <body>
-  <div class="finisher-header">
+  <div class="background">
     <div class="content">
       <h1 class="title">Albi</h1>
       <p class="subtitle">
@@ -67,48 +15,12 @@
       </p>
       <a href="https://discord.com/users/564514171702607892" target="_blank" class="contact-btn">Contact</a>
     </div>
+    <div class="dots">
+      <!-- Dots will be animated using CSS -->
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
   </div>
-
-  <!-- Dodaj skrypt finisher-header -->
-  <script src="finisher-header.es5.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    new FinisherHeader({
-      "count": 12,
-      "size": {
-        "min": 1300,
-        "max": 1500,
-        "pulse": 0
-      },
-      "speed": {
-        "x": {
-          "min": 0.6,
-          "max": 3
-        },
-        "y": {
-          "min": 0.6,
-          "max": 3
-        }
-      },
-      "colors": {
-        "background": "#000000",
-        "particles": [
-          "#2f1cff",
-          "#87fef6",
-          "#1efe9d",
-          "#ff0afd"
-        ]
-      },
-      "blending": "screen",
-      "opacity": {
-        "center": 0.6,
-        "edge": 0
-      },
-      "skew": -2,
-      "shapes": [
-        "c"
-      ]
-    });
-  </script>
 </body>
 </html>
 
