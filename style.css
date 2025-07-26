@@ -7,7 +7,6 @@
 body, html {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f0f8ff, #dbeeff);
   overflow: hidden;
 }
 
@@ -20,11 +19,14 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* Tło jest tworzone przez Vanta.js, więc nie ustawiamy background */
 }
 
 .title {
   font-size: 4rem;
   color: #1da1f2;
+  position: relative;
+  z-index: 1;
 }
 
 .subtitle {
@@ -32,6 +34,8 @@ body, html {
   color: #3a7ca5;
   margin-top: 10px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-btn {
@@ -42,38 +46,10 @@ body, html {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-btn:hover {
   background-color: #0d8ddb;
-}
-
-/* Dots animation */
-.dots span {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #1da1f2;
-  border-radius: 50%;
-  animation: float 10s infinite ease-in-out;
-}
-
-.dots span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.dots span:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; }
-.dots span:nth-child(3) { top: 50%; left: 50%; animation-delay: 4s; }
-.dots span:nth-child(4) { top: 70%; left: 30%; animation-delay: 6s; }
-.dots span:nth-child(5) { top: 20%; left: 60%; animation-delay: 8s; }
-.dots span:nth-child(6) { top: 40%; left: 10%; animation-delay: 3s; }
-.dots span:nth-child(7) { top: 80%; left: 70%; animation-delay: 5s; }
-.dots span:nth-child(8) { top: 60%; left: 90%; animation-delay: 7s; }
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-20px) scale(1.2);
-    opacity: 0.5;
-  }
 }
