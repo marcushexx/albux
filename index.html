@@ -2,15 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JPPX</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Dodajemy Vanta.js i three.js -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JPPX with Vanta Background</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    #vanta-bg {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+    }
+    h1.title {
+      font-size: 4rem;
+      color: #1da1f2;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #3a7ca5;
+      margin-bottom: 30px;
+    }
+    a.contact-btn {
+      background-color: #1da1f2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    a.contact-btn:hover {
+      background-color: #0d8ddb;
+    }
+  </style>
+
+  <!-- three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <!-- vanta topology -->
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
 </head>
 <body>
-  <div id="vanta-bg" class="background">
+  <div id="vanta-bg">
     <div class="content">
       <h1 class="title">Albi</h1>
       <p class="subtitle">
@@ -24,15 +76,15 @@
     VANTA.TOPOLOGY({
       el: "#vanta-bg",
       backgroundAlpha: 1,
-      backgroundColor: 8738,
-      color: 10208767,
+      backgroundColor: 0x002266,
+      color: 0x9bc5ff,
       gyroControls: false,
       mouseControls: false,
       touchControls: false,
-      minHeight: 200,
-      minWidth: 200,
-      scale: 1,
-      scaleMobile: 1
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
     });
   </script>
 </body>
